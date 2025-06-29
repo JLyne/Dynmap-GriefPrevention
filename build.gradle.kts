@@ -1,4 +1,5 @@
 import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
+import net.minecrell.pluginyml.paper.PaperPluginDescription
 
 plugins {
     java
@@ -28,10 +29,20 @@ dependencies {
     compileOnly(libs.dynmapApi)
 }
 
-bukkit {
+paper {
     main = "org.dynmap.griefprevention.DynmapGriefPreventionPlugin"
     apiVersion = libs.versions.paperApi.get().replace(Regex("\\-R\\d.\\d-SNAPSHOT"), "")
     authors = listOf("mikeprimm", "stumper66", "Jim (AnEnragedPigeon)")
     description = "Show GriefPrevention claims on dynmap"
-    depend = listOf("dynmap", "GriefPrevention")
+
+    serverDependencies {
+        register("dynmap") {
+            required = true
+            load = PaperPluginDescription.RelativeLoadOrder.BEFORE
+        }
+        register("GriefPrevention") {
+            required = true
+            load = PaperPluginDescription.RelativeLoadOrder.BEFORE
+        }
+    }
 }
