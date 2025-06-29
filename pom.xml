@@ -42,12 +42,16 @@
 
   <repositories>
     <repository>
-      <id>spigotmc-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+      <id>paper-repo</id>
+      <url>https://repo.papermc.io/repository/maven-public/</url>
     </repository>
     <repository>
       <id>dynmap-repo</id>
       <url>https://repo.mikeprimm.com/</url>
+    </repository>
+    <repository>
+      <id>gp-repo</id>
+      <url>https://jitpack.io/</url>
     </repository>
   </repositories>
 
@@ -55,26 +59,24 @@
     <dependency>
       <groupId>us.dynmap</groupId>
       <artifactId>dynmap-api</artifactId>
-      <version>3.3</version>
+      <version>3.6</version>
     </dependency>
     <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot-api</artifactId>
-      <version>1.18.1-R0.1-SNAPSHOT</version>
+      <groupId>us.dynmap</groupId>
+      <artifactId>DynmapCoreAPI</artifactId>
+      <version>3.6</version>
+    </dependency>
+    <dependency>
+      <groupId>io.papermc.paper</groupId>
+      <artifactId>paper-api</artifactId>
+      <version>1.21.6-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>me.ryanhamshire</groupId>
+      <groupId>com.github.TechFortress</groupId>
       <artifactId>GriefPrevention</artifactId>
-      <version>16.17.1</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/GriefPrevention-16.17.1.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains</groupId>
-      <artifactId>annotations</artifactId>
-      <version>23.0.0</version>
-      <scope>compile</scope>
+      <version>17.0.0</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

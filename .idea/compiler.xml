@@ -9,5 +9,6 @@
         <module name="Dynmap-GriefPrevention" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="21" />
   </component>
 </project>
