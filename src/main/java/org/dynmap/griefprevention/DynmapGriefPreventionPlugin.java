@@ -1,13 +1,11 @@
 package org.dynmap.griefprevention;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import me.ryanhamshire.GriefPrevention.Claim;
 import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.Plugin;

@@ -38,7 +38,7 @@ public class UpdateProcessing {
     private final DynmapGriefPreventionPlugin main;
     private final Map<UUID, String> playerNameCache;
     private final Pattern idPattern;
-    private boolean showDebug;
+    private final boolean showDebug;
 
     @Nullable ArrayList<Claim> getClaims(){
         ArrayList<Claim> claims;
@@ -198,14 +198,14 @@ public class UpdateProcessing {
         }
     }
     private boolean isVisible(String owner, String worldname) {
-        if((main.visible != null) && (main.visible.size() > 0)) {
+        if((main.visible != null) && (!main.visible.isEmpty())) {
             if((!main.visible.contains(owner)) && (!main.visible.contains("world:" + worldname)) &&
                     (!main.visible.contains(worldname + "/" + owner))) {
                 return false;
             }
         }
 
-        if((main.hidden != null) && (main.hidden.size() > 0)) {
+        if((main.hidden != null) && (!main.hidden.isEmpty())) {
             return !main.hidden.contains(owner) && !main.hidden.contains("world:" + worldname)
                     && !main.hidden.contains(worldname + "/" + owner);
         }
