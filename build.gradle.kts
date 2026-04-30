@@ -31,7 +31,7 @@ dependencies {
 
 paper {
     main = "org.dynmap.griefprevention.DynmapGriefPreventionPlugin"
-    apiVersion = libs.versions.paperApi.get().replace(Regex("\\-R\\d.\\d-SNAPSHOT"), "")
+    apiVersion = libs.versions.paperApi.get().replace(".build.+", "")
     authors = listOf("mikeprimm", "stumper66", "Jim (AnEnragedPigeon)")
     description = "Show GriefPrevention claims on dynmap"
 
