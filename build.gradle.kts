@@ -1,4 +1,3 @@
-import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 import net.minecrell.pluginyml.paper.PaperPluginDescription
 
 plugins {
@@ -16,7 +15,9 @@ java {
 }
 
 repositories {
-    maven { url = uri("https://repo.papermc.io/repo/maven-public/") }
+    maven {
+		url = uri("https://repo.papermc.io/repository/maven-public/")
+	}
     maven { url = uri("https://jitpack.io/") }
     maven { url = uri("https://repo.mikeprimm.com/") }
     mavenLocal()
