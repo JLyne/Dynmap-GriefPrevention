@@ -5,7 +5,7 @@ paperApi = "26.3.build.+"
 dynmap = "3.7-SNAPSHOT"
 
 [libraries]
-griefPrevention = { group = "com.github.TechFortress", name = "GriefPrevention", version.ref  = "griefPrevention" }
+griefPrevention = { group = "com.github.GriefPrevention", name = "GriefPrevention", version.ref  = "griefPrevention" }
 paperApi = { group = "io.papermc.paper", name = "paper-api", version.ref = "paperApi" }
 dynmapCore = { group = "us.dynmap", name = "DynmapCoreAPI", version.ref = "dynmap" }
 dynmapApi = { group = "us.dynmap", name = "dynmap-api", version.ref = "dynmap" }
